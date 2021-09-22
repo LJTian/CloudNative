@@ -1,14 +1,14 @@
 package main
 
-import
-(
+import (
 	"fmt"
 )
+
 // type 细节区别
 type myString string
 type AliasString = string
 
-func TypeMain(){
+func TypeMain() {
 
 	fmt.Println("Type 细节实现 测试【重点在 “=” 号】")
 	var str1 string
@@ -17,30 +17,33 @@ func TypeMain(){
 	str1 = "String"
 	str2 = "String"
 
-	fmt.Printf( " str1 is [%T] \n str2 is [%T]\n str3 is [%T]\n", str1, str2, str3 )
+	fmt.Printf(" str1 is [%T] \n str2 is [%T]\n str3 is [%T]\n", str1, str2, str3)
 
 }
 
 // 练习题1 替换数据
-func Exercise(){
+func Exercise() {
 
 	fmt.Println("练习题1 替换数据")
-	a  :=  []string{"I","am","stupid","and","weak"}
-	for k ,v := range a {
-		if v == "stupid"{
+	a := []string{"I", "am", "stupid", "and", "weak"}
+	for k, v := range a {
+		if v == "stupid" {
 			a[k] = "smart"
 		}
 
-		if v == "weak"{
+		if v == "weak" {
 			a[k] = "strong"
 		}
 	}
 	fmt.Println(a)
 }
 
-func main(){
+func main() {
 
-	TypeMain()
-	Exercise()
+	//TypeMain()
+	//Exercise()
+	//IFMain()
+	//ReflectMain()
+	//MarshalMain()
 
 }
