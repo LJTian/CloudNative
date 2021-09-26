@@ -21,7 +21,6 @@ func Initpporf() {
 func monitorFunc(w http.ResponseWriter, r *http.Request) {
 
 	io.WriteString(os.Stdout, fmt.Sprintf("Url is [%s] \t addr is [%s]\n", r.URL, r.RemoteAddr))
-
 	// 目前只支持一层
 	URL := r.URL.String()
 	URLS := strings.Split(URL, "/")

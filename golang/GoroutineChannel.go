@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-// 生产者
+// s生产者
 func WriteFunc(ch1 chan int, intNum int) {
 
 	ch1 <- intNum
 
 }
 
-// 消费者
 func ReadFunc(ch1 chan int, okCh chan int) {
 	i := <-ch1
 	fmt.Println("读出的内容为：", i, "\n")

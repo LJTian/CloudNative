@@ -46,5 +46,6 @@ func main() {
 	//ReflectMain()
 	//MarshalMain()
 	//PanicRecoverMain()
-	GoroutineChannelMain()
+	//GoroutineChannelMain()
+	SyncGoSliceMain(1000, 50, 20)
 }
