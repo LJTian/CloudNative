@@ -1,9 +1,9 @@
 tag=v1.0
-UserName="LJTian"
-PathName="homeWork"
-ExecName="httpServer"
+UserName=ljtian
+PathName=homework
+ExecName=httpserver
 
-TagName=${UserName}/${PathName}/${ExecName}:${tag}
+TagName=${UserName}/${PathName}-${ExecName}:${tag}
 
 build:
 	echo "building httpserver binary"

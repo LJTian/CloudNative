@@ -5,15 +5,17 @@ ENV GO111MODULE=on \
     CGO_ENABLED=0 \
     GOOS=linux \
     GOARCH=amd64 \
-	GOPROXY=https://goproxy.cn
+    GOPROXY=https://goproxy.cn
 
 # 移动到工作目录：/build
 WORKDIR /build
 
 # 将我们的代码编译成二进制可执行文件 app
-# 将代码复制到容器中
 COPY . .
-RUN go build -o src/main.go httpServer
+RUN go mod tidy
+RUN go mod download
+# 将代码复制到容器中
+RUN go build -o httpServer src/main.go
 
 ###################
 # 接下来创建一个小镜像
